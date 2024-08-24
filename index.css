@@ -1,0 +1,141 @@
+:root {
+    --width-menu: 360px;
+    --height-menu: 300px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    background-color: #a7f3d0;
+}
+
+.paper-roll {
+    position: relative;
+    width: var(--width-menu);
+    height: var(--height-menu);
+}
+
+.paper-roll > p {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.paper-roll .handle div:first-child {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(var(--width-menu) / 36 * 13);
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #3a4149;
+}
+
+.paper-roll .handle div:first-child span:first-child {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 40px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.paper-roll .handle div:first-child span:last-child {
+    position: absolute;
+    top: 6px;
+    left: 50px;
+    width: 20px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.paper-roll .handle div:last-child {
+    position: absolute;
+    top: 10px;
+    width: var(--width-menu);
+    height: calc(var(--height-menu) / 30 * 16);
+    border-radius: 20px;
+    border: 15px solid #3a4149;
+    box-sizing: border-box;
+}
+
+p {
+    transform: perspective(1000px) rotateX(0deg);
+    transition: 0.5s;
+}
+
+.list {
+    position: absolute;
+    top: calc(var(--height-menu) / 30 * 6);
+    left: calc(var(--width-menu) / 36 * 2);
+    width: calc(var(--width-menu) / 36 * 32); 
+    height: 200px;
+    font-size: 30px;
+    overflow: hidden;
+    transition: 0.5s
+}
+
+.list:hover {
+    cursor: pointer;
+}
+
+.list .value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list p {
+    position: absolute;
+    width: calc(var(--width-menu) / 36 * 32);
+    height: 200px;
+    background-color: white;
+    box-sizing: border-box;
+    border: 5px solid gray;
+    border-radius: 10px;
+}
+
+.list ul li:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+.list ul {
+    position: absolute;
+    top: -610px;
+    width: calc(var(--width-menu) / 36 * 32);
+    background-color: white;
+    border: 5px solid gray;
+    border-radius: 10px;
+    box-sizing: border-box;
+    list-style: none;
+    transition: 0.5s;
+}
+
+.list ul li {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px dashed gray;
+    box-sizing: border-box;
+}
+
+.list ul li:last-child {
+    border: none;
+}
